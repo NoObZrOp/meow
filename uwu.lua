@@ -692,7 +692,7 @@ end
 
 function AutoPlantBlood()
     while task.wait() do 
-        if not _G.AutoPlant1 then 
+        if not _G.AutoPlant then 
             return 
         end
         
@@ -709,7 +709,7 @@ end
 
 function AutoHarvestBlood()
     while task.wait(0.2) do
-        if not _G.AutoHarvest1 then 
+        if not _G.AutoHarvest then 
             return 
         end
         
