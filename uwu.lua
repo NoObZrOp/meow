@@ -10,7 +10,7 @@ local Heals = Window:MakeTab({
 })
 
 local Farming = Window:MakeTab({
-	Name = "Farming",
+	Name = "Boxes -Broken",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
@@ -949,232 +949,11 @@ Heals:AddToggle({
 	end    
 })
 
-local TrashyBox = Farming:AddSection({
-	Name = "Boxxy"
-})
-Farming:AddToggle({
-	Name = "AutoBoxNew",
-	Default = false,
-	Callback = function(Value)
-		_G.AutoBoxNew = Value
-        AutoBoxNew()
-	end    
-})
-
-local FruitToFarm = Farming:AddSection({
-	Name = "Fruits to farm"
-})
-
-Farming:AddButton({
-	Name = "Autofarm - Bloodfruit",
-	Callback = function()
-        local placekey = "p"
-        local plantkey = "["
-        local collectkey = "]"
-        local amountofpots = 40  
-        
-
-        local Mouse = Player:GetMouse()
-        
-        _G.plant = function()
-            for _, v in pairs(workspace.Deployables:GetChildren()) do
-                if v.Name == "Plant Box" and (Player.Character.Head.Position - v.PrimaryPart.Position).magnitude < 50 then
-                    game.ReplicatedStorage.Events.InteractStructure:FireServer(v, "Bloodfruit")
-                end
-            end
-        end
-        
-        _G.collect = function()
-            for _, v in pairs(workspace:GetChildren()) do
-                if v.Name == "Bloodfruit Bush" and (Player.Character.Head.Position - v.PrimaryPart.Position).magnitude < 50 then
-                    game.ReplicatedStorage.Events.Pickup:FireServer(v)
-                end
-            end
-        end
-        
-        Mouse.KeyUp:connect(function(k)
-            if k == placekey then
-                for i = 1, amountofpots do
-                    game.ReplicatedStorage.Events.PlaceStructure:FireServer("Plant Box", Mouse.Hit, 0)
-                end
-            elseif k == plantkey then
-                _G.plant()
-            elseif k == collectkey then
-                _G.collect()
-            end
-        end)
-  	end    
-})
-
-Farming:AddButton({
-	Name = "Autofarm - Berries",
-	Callback = function()
-        local placekey = "p"
-        local plantkey = "["
-        local collectkey = "]"
-        local amountofpots = 40  
-        
-
-        local Mouse = Player:GetMouse()
-        
-        _G.plant = function()
-            for _, v in pairs(workspace.Deployables:GetChildren()) do
-                if v.Name == "Plant Box" and (Player.Character.Head.Position - v.PrimaryPart.Position).magnitude < 50 then
-                    game.ReplicatedStorage.Events.InteractStructure:FireServer(v, "Berry")
-                end
-            end
-        end
-        
-        _G.collect = function()
-            for _, v in pairs(workspace:GetChildren()) do
-                if v.Name == "Berry Bush" and (Player.Character.Head.Position - v.PrimaryPart.Position).magnitude < 50 then
-                    game.ReplicatedStorage.Events.Pickup:FireServer(v)
-                end
-            end
-        end
-        
-        Mouse.KeyUp:connect(function(k)
-            if k == placekey then
-                for i = 1, amountofpots do
-                    game.ReplicatedStorage.Events.PlaceStructure:FireServer("Plant Box", Mouse.Hit, 0)
-                end
-            elseif k == plantkey then
-                _G.plant()
-            elseif k == collectkey then
-                _G.collect()
-            end
-        end)
-  	end    
-})
-
-Farming:AddButton({
-	Name = "Autofarm - Bluefruit",
-	Callback = function()
-        local placekey = "p"
-        local plantkey = "["
-        local collectkey = "]"
-        local amountofpots = 40  
-        
-
-        local Mouse = Player:GetMouse()
-        
-        _G.plant = function()
-            for _, v in pairs(workspace.Deployables:GetChildren()) do
-                if v.Name == "Plant Box" and (Player.Character.Head.Position - v.PrimaryPart.Position).magnitude < 50 then
-                    game.ReplicatedStorage.Events.InteractStructure:FireServer(v, "Bluefruit")
-                end
-            end
-        end
-        
-        _G.collect = function()
-            for _, v in pairs(workspace:GetChildren()) do
-                if v.Name == "Bluefruit Bush" and (Player.Character.Head.Position - v.PrimaryPart.Position).magnitude < 50 then
-                    game.ReplicatedStorage.Events.Pickup:FireServer(v)
-                end
-            end
-        end
-        
-        Mouse.KeyUp:connect(function(k)
-            if k == placekey then
-                for i = 1, amountofpots do
-                    game.ReplicatedStorage.Events.PlaceStructure:FireServer("Plant Box", Mouse.Hit, 0)
-                end
-            elseif k == plantkey then
-                _G.plant()
-            elseif k == collectkey then
-                _G.collect()
-            end
-        end)
-  	end    
-})
-
-Farming:AddButton({
-	Name = "Autofarm - Lemons",
-	Callback = function()
-        local placekey = "p"
-        local plantkey = "["
-        local collectkey = "]"
-        local amountofpots = 40  
-        
-
-        local Mouse = Player:GetMouse()
-        
-        _G.plant = function()
-            for _, v in pairs(workspace.Deployables:GetChildren()) do
-                if v.Name == "Plant Box" and (Player.Character.Head.Position - v.PrimaryPart.Position).magnitude < 50 then
-                    game.ReplicatedStorage.Events.InteractStructure:FireServer(v, "Lemon")
-                end
-            end
-        end
-        
-        _G.collect = function()
-            for _, v in pairs(workspace:GetChildren()) do
-                if v.Name == "Lemon Tree" and (Player.Character.Head.Position - v.PrimaryPart.Position).magnitude < 50 then
-                    game.ReplicatedStorage.Events.Pickup:FireServer(v)
-                end
-            end
-        end
-        
-        Mouse.KeyUp:connect(function(k)
-            if k == placekey then
-                for i = 1, amountofpots do
-                    game.ReplicatedStorage.Events.PlaceStructure:FireServer("Plant Box", Mouse.Hit, 0)
-                end
-            elseif k == plantkey then
-                _G.plant()
-            elseif k == collectkey then
-                _G.collect()
-            end
-        end)
-  	end    
-})
-
-Farming:AddButton({
-	Name = "Autofarm - Jelly",
-	Callback = function()
-        local placekey = "p"
-        local plantkey = "["
-        local collectkey = "]"
-        local amountofpots = 40  
-        
-
-        local Mouse = Player:GetMouse()
-        
-        _G.plant = function()
-            for _, v in pairs(workspace.Deployables:GetChildren()) do
-                if v.Name == "Plant Box" and (Player.Character.Head.Position - v.PrimaryPart.Position).magnitude < 50 then
-                    game.ReplicatedStorage.Events.InteractStructure:FireServer(v, "Jelly")
-                end
-            end
-        end
-        
-        _G.collect = function()
-            for _, v in pairs(workspace:GetChildren()) do
-                if v.Name == "Jelly Crop" and (Player.Character.Head.Position - v.PrimaryPart.Position).magnitude < 50 then
-                    game.ReplicatedStorage.Events.Pickup:FireServer(v)
-                end
-            end
-        end
-        
-        Mouse.KeyUp:connect(function(k)
-            if k == placekey then
-                for i = 1, amountofpots do
-                    game.ReplicatedStorage.Events.PlaceStructure:FireServer("Plant Box", Mouse.Hit, 0)
-                end
-            elseif k == plantkey then
-                _G.plant()
-            elseif k == collectkey then
-                _G.collect()
-            end
-        end)
-  	end    
-})
-
-local AfkBoxes = AfkFarming:AddSection({
+local AfkBoxes = Farming:AddSection({
 	Name = "AutoPlantBoxBeta -- Patched/Outdated"
 })
 
-AfkFarming:AddToggle({
+Farming:AddToggle({
 	Name = "AutoBoxesLazySlow",
 	Default = false,
 	Callback = function(Value)
@@ -1183,7 +962,7 @@ AfkFarming:AddToggle({
 	end    
 })
 
-AfkFarming:AddToggle({
+Farming:AddToggle({
 	Name = "AutoBoxesL1",
 	Default = false,
 	Callback = function(Value)
@@ -1192,7 +971,7 @@ AfkFarming:AddToggle({
 	end    
 })
 
-AfkFarming:AddToggle({
+Farming:AddToggle({
 	Name = "AutoBoxesL2",
 	Default = false,
 	Callback = function(Value)
@@ -1201,7 +980,7 @@ AfkFarming:AddToggle({
 	end    
 })
 
-AfkFarming:AddToggle({
+Farming:AddToggle({
 	Name = "AutoBoxesL3",
 	Default = false,
 	Callback = function(Value)
@@ -1210,7 +989,7 @@ AfkFarming:AddToggle({
 	end    
 })
 
-AfkFarming:AddToggle({
+Farming:AddToggle({
 	Name = "AutoBoxesL4",
 	Default = false,
 	Callback = function(Value)
@@ -1219,7 +998,7 @@ AfkFarming:AddToggle({
 	end    
 })
 
-AfkFarming:AddToggle({
+Farming:AddToggle({
 	Name = "AutoBoxesL5",
 	Default = false,
 	Callback = function(Value)
@@ -1228,12 +1007,24 @@ AfkFarming:AddToggle({
 	end    
 })
 
-AfkFarming:AddToggle({
+Farming:AddToggle({
 	Name = "AutoBoxesL6",
 	Default = false,
 	Callback = function(Value)
 		_G.AutoBoxesL6 = Value
         AutoBoxesL6()
+	end    
+})
+
+local TrashyBox = AfkFarming:AddSection({
+	Name = "Boxxy"
+})
+AfkFarming:AddToggle({
+	Name = "AutoBoxNew",
+	Default = false,
+	Callback = function(Value)
+		_G.AutoBoxNew = Value
+        AutoBoxNew()
 	end    
 })
 
@@ -1458,7 +1249,7 @@ end
 
 Keybinds:AddBind({
 	Name = "Auto - Pickup Crop You Set",
-	Default = nil,
+	Default = " ",
 	Hold = false,
 	Callback = function()
 		AutoPickUp()
@@ -1467,7 +1258,7 @@ Keybinds:AddBind({
 
 Keybinds:AddBind({
 	Name = "Auto - Plant Fruit You Set",
-	Default = nil,
+	Default = " ",
 	Hold = false,
 	Callback = function()
 		AutoPlant()
@@ -1482,39 +1273,26 @@ Misc:AddButton({
 })
 
 local Credits1 = Credits:AddSection({
+	Name = "Credits : "
+})
+
+local Credits2 = Credits:AddSection({
+	Name = "1. Your Kitty"
+})
+
+local nya = Credits:AddSection({
+	Name = ":3 nya~"
+})
+
+local uwu = Credits:AddSection({
 	Name = "meow get robbed uwu"
 })
 
-local Credits2 = Credits:AddSection({
-	Name = "shitty code cause totally not borrowed"
-})
-
-local Credits2 = Credits:AddSection({
-	Name = "by kitty~   uwu "
-})
-
-local Credits2 = Credits:AddSection({
-	Name = "by kitty~   uwu "
-})
-
-local Credits2 = Credits:AddSection({
-	Name = "meow meow meoww "
-})
-
-local Credits2 = Credits:AddSection({
-	Name = "meow meow meoww "
-})
-
-local Credits2 = Credits:AddSection({
-	Name = "meow meow meoww "
-})
-
-local Credits2 = Credits:AddSection({
-	Name = "meow meow meoww "
+local skid = Credits:AddSection({
+	Name = "shitty code cause totally not borrowed :<"
 })
 
 local ToggleGuiKeyBind = Credits:AddSection({
 	Name = "Right Shift - Open ui"
 })
-
 OrionLib:Init()
