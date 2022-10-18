@@ -100,7 +100,7 @@ end
 function AutoBlood()
         while _G.AutoBlood == true do
         if _G.AutoBlood == true then 
-        if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Humanoid").Health <= 96 then
+        if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Humanoid").Health <= 90 then
         game:GetService("ReplicatedStorage").Events.UseBagItem:FireServer("Bloodfruit") -- fruit
          end
           task.wait()
@@ -111,7 +111,7 @@ end
 function AutoPumpkin()
     while _G.AutoPumpkin == true do
         if _G.AutoPumpkin ==true then        
-            if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Humanoid").Health <= 96 then
+            if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Humanoid").Health <= 90 then
         game:GetService("ReplicatedStorage").Events.UseBagItem:FireServer("Pumpkin") -- fruit
          end
           task.wait()
@@ -122,7 +122,7 @@ end
 function AutoBerries()
     while _G.AutoBerries == true do
         if _G.AutoBerries == true then 
-        if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Humanoid").Health <= 96 then
+        if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Humanoid").Health <= 90 then
         game:GetService("ReplicatedStorage").Events.UseBagItem:FireServer("Berry") -- fruit
         end
         task.wait()
@@ -133,7 +133,7 @@ end
 function AutoBluefruit()
     while _G.AutoBluefruit == true do
         if _G.AutoBluefruit == true then 
-        if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Humanoid").Health <= 96 then
+        if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Humanoid").Health <= 90 then
         game:GetService("ReplicatedStorage").Events.UseBagItem:FireServer("Bluefruit") -- fruit
          end
           task.wait()
@@ -144,7 +144,7 @@ end
 function AutoLemons()
     while _G.AutoLemons == true do
         if _G.AutoLemons == true then 
-        if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Humanoid").Health <= 96 then
+        if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Humanoid").Health <= 90 then
         game:GetService("ReplicatedStorage").Events.UseBagItem:FireServer("Lemon") -- fruit
          end
           task.wait()
@@ -155,7 +155,7 @@ end
 function AutoJelly()
     while _G.AutoJelly == true do
         if _G.AutoJelly == true then 
-        if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Humanoid").Health <= 96 then
+        if game:GetService("Players").LocalPlayer.Character:FindFirstChild("Humanoid").Health <= 90 then
         game:GetService("ReplicatedStorage").Events.UseBagItem:FireServer("Jelly") -- fruit
          end
           task.wait()
@@ -183,7 +183,7 @@ function AutoBoxNew()
             happyghosty:FireServer("Plant Box", playerhrp.CFrame * CFrame.new(6.5, -4, 0))
             happyghosty:FireServer("Plant Box", playerhrp.CFrame * CFrame.new(-6.5, -4, 0))
             happyghosty:FireServer("Plant Box", playerhrp.CFrame * CFrame.new(0, -4, 0))
-            task.wait(0.026)
+            task.wait(0.1)
         end
     end
 end
@@ -211,7 +211,7 @@ local playerhrp = game:GetService("Players").LocalPlayer.Character.HumanoidRootP
         happyghosty:FireServer("Plant Box", playerhrp.CFrame * CFrame.new(-0, -4.5, -10.5), 0)
         task.wait()
         happyghosty:FireServer("Plant Box", playerhrp.CFrame * CFrame.new(-0, -4.5, -10), 0)
-        task.wait(0.069420)
+        task.wait(0.069020)
         happyghosty:FireServer("Plant Box", playerhrp.CFrame * CFrame.new(-0, -4.5, -9.5), 0)
         task.wait()
         happyghosty:FireServer("Plant Box", playerhrp.CFrame * CFrame.new(-0, -4.5, -9), 0)
@@ -229,7 +229,7 @@ local playerhrp = game:GetService("Players").LocalPlayer.Character.HumanoidRootP
         happyghosty:FireServer("Plant Box", playerhrp.CFrame * CFrame.new(-0, -4.5, -6), 0)
         task.wait()
         happyghosty:FireServer("Plant Box", playerhrp.CFrame * CFrame.new(-0, -4.5, -5.5), 0)
-        task.wait(0.069420)
+        task.wait(0.069020)
         happyghosty:FireServer("Plant Box", playerhrp.CFrame * CFrame.new(-0, -4, -14), 0)
         task.wait()
         happyghosty:FireServer("Plant Box", playerhrp.CFrame * CFrame.new(-0, -4, -13.5), 0)
@@ -247,7 +247,7 @@ local playerhrp = game:GetService("Players").LocalPlayer.Character.HumanoidRootP
         happyghosty:FireServer("Plant Box", playerhrp.CFrame * CFrame.new(-0, -4, -10.5), 0)
         task.wait()
         happyghosty:FireServer("Plant Box", playerhrp.CFrame * CFrame.new(-0, -4, -10), 0)
-        task.wait(0.069420)
+        task.wait(0.069020)
         happyghosty:FireServer("Plant Box", playerhrp.CFrame * CFrame.new(-0, -4, -9.5), 0)
         task.wait()
         happyghosty:FireServer("Plant Box", playerhrp.CFrame * CFrame.new(-0, -4, -9), 0)
@@ -265,7 +265,7 @@ local playerhrp = game:GetService("Players").LocalPlayer.Character.HumanoidRootP
         happyghosty:FireServer("Plant Box", playerhrp.CFrame * CFrame.new(-0, -4, -6), 0)
         task.wait()
         happyghosty:FireServer("Plant Box", playerhrp.CFrame * CFrame.new(-0, -4, -5.5), 0)
-        task.wait(0.069420)
+        task.wait(0.069020)
         happyghosty:FireServer("Plant Box", playerhrp.CFrame * CFrame.new(-0, -3.5, -14), 0)
         task.wait()
         happyghosty:FireServer("Plant Box", playerhrp.CFrame * CFrame.new(-0, -3.5, -13.5), 0)
@@ -283,7 +283,7 @@ local playerhrp = game:GetService("Players").LocalPlayer.Character.HumanoidRootP
         happyghosty:FireServer("Plant Box", playerhrp.CFrame * CFrame.new(-0, -3.5, -10.5), 0)
         task.wait()
         happyghosty:FireServer("Plant Box", playerhrp.CFrame * CFrame.new(-0, -3.5, -10), 0)
-        task.wait(0.069420)
+        task.wait(0.069020)
         happyghosty:FireServer("Plant Box", playerhrp.CFrame * CFrame.new(-0, -3.5, -9.5), 0)
         task.wait()
         happyghosty:FireServer("Plant Box", playerhrp.CFrame * CFrame.new(-0, -3.5, -9), 0)
@@ -301,7 +301,7 @@ local playerhrp = game:GetService("Players").LocalPlayer.Character.HumanoidRootP
         happyghosty:FireServer("Plant Box", playerhrp.CFrame * CFrame.new(-0, -3.5, -6), 0)
         task.wait()
         happyghosty:FireServer("Plant Box", playerhrp.CFrame * CFrame.new(-0, -3.5, -5.5), 0)
-        task.wait(0.069420)
+        task.wait(0.069020)
         happyghosty:FireServer("Plant Box", playerhrp.CFrame * CFrame.new(-0, -3, -14), 0)
         task.wait()
         happyghosty:FireServer("Plant Box", playerhrp.CFrame * CFrame.new(-0, -3, -13.5), 0)
@@ -319,7 +319,7 @@ local playerhrp = game:GetService("Players").LocalPlayer.Character.HumanoidRootP
         happyghosty:FireServer("Plant Box", playerhrp.CFrame * CFrame.new(-0, -3, -10.5), 0)
         task.wait()
         happyghosty:FireServer("Plant Box", playerhrp.CFrame * CFrame.new(-0, -3, -10), 0)
-        task.wait(0.069420)
+        task.wait(0.069020)
         happyghosty:FireServer("Plant Box", playerhrp.CFrame * CFrame.new(-0, -3, -9.5), 0)
         task.wait()
         happyghosty:FireServer("Plant Box", playerhrp.CFrame * CFrame.new(-0, -3, -9), 0)
@@ -337,7 +337,7 @@ local playerhrp = game:GetService("Players").LocalPlayer.Character.HumanoidRootP
         happyghosty:FireServer("Plant Box", playerhrp.CFrame * CFrame.new(-0, -3, -6), 0)
         task.wait()
         happyghosty:FireServer("Plant Box", playerhrp.CFrame * CFrame.new(-0, -3, -5.5), 0)
-        task.wait(0.069420)
+        task.wait(0.069020)
         happyghosty:FireServer("Plant Box", playerhrp.CFrame * CFrame.new(-0, -2.5, -14), 0)
         task.wait()
         happyghosty:FireServer("Plant Box", playerhrp.CFrame * CFrame.new(-0, -2.5, -13.5), 0)
@@ -355,7 +355,7 @@ local playerhrp = game:GetService("Players").LocalPlayer.Character.HumanoidRootP
         happyghosty:FireServer("Plant Box", playerhrp.CFrame * CFrame.new(-0, -2.5, -10.5), 0)
         task.wait()
         happyghosty:FireServer("Plant Box", playerhrp.CFrame * CFrame.new(-0, -2.5, -10), 0)
-        task.wait(0.069420)
+        task.wait(0.069020)
         happyghosty:FireServer("Plant Box", playerhrp.CFrame * CFrame.new(-0, -2.5, -9.5), 0)
         task.wait()
         happyghosty:FireServer("Plant Box", playerhrp.CFrame * CFrame.new(-0, -2.5, -9), 0)
@@ -373,7 +373,7 @@ local playerhrp = game:GetService("Players").LocalPlayer.Character.HumanoidRootP
         happyghosty:FireServer("Plant Box", playerhrp.CFrame * CFrame.new(-0, -2.5, -6), 0)
         task.wait()
         happyghosty:FireServer("Plant Box", playerhrp.CFrame * CFrame.new(-0, -2.5, -5.5), 0)
-        task.wait(0.069420)
+        task.wait(0.069020)
         happyghosty:FireServer("Plant Box", playerhrp.CFrame * CFrame.new(-0, -2, -14), 0)
         task.wait()
         happyghosty:FireServer("Plant Box", playerhrp.CFrame * CFrame.new(-0, -2, -13.5), 0)
@@ -391,7 +391,7 @@ local playerhrp = game:GetService("Players").LocalPlayer.Character.HumanoidRootP
         happyghosty:FireServer("Plant Box", playerhrp.CFrame * CFrame.new(-0, -2, -10.5), 0)
         task.wait()
         happyghosty:FireServer("Plant Box", playerhrp.CFrame * CFrame.new(-0, -2, -10), 0)
-        task.wait(0.069420)
+        task.wait(0.069020)
         happyghosty:FireServer("Plant Box", playerhrp.CFrame * CFrame.new(-0, -2, -9.5), 0)
         task.wait()
         happyghosty:FireServer("Plant Box", playerhrp.CFrame * CFrame.new(-0, -2, -9), 0)
@@ -409,7 +409,7 @@ local playerhrp = game:GetService("Players").LocalPlayer.Character.HumanoidRootP
         happyghosty:FireServer("Plant Box", playerhrp.CFrame * CFrame.new(-0, -2, -6), 0)
         task.wait()
         happyghosty:FireServer("Plant Box", playerhrp.CFrame * CFrame.new(-0, -2, -5.5), 0)
-        task.wait(0.069420)
+        task.wait(0.069020)
         end
     end
 end
@@ -708,7 +708,7 @@ function AutoPlantBlood()
 end
 
 function AutoHarvestBlood()
-    while task.wait(0.2) do
+    while task.wait(1) do
         if not _G.AutoHarvest then 
             return 
         end
@@ -742,14 +742,14 @@ end
 
 
 function AutoHarvestBerry()
-    while task.wait(0.2) do
+    while task.wait(1) do
         if not _G.AutoHarvest2 then 
             return 
         end
         
         if (Player.Character and Player.Character.PrimaryPart) then
             for _, v in pairs(workspace:GetChildren()) do
-                if v.Name == "Pumpkin Patch Crop" and (Player.Character.PrimaryPart.Position - v.PrimaryPart.Position).magnitude < 50 then
+                if v.Name == "Berry Bush" and (Player.Character.PrimaryPart.Position - v.PrimaryPart.Position).magnitude < 50 then
                     game.ReplicatedStorage.Events.Pickup:FireServer(v)
                 end
             end
@@ -774,9 +774,8 @@ function AutoPlantBlue()
     end
 end
 
-
 function AutoHarvestBlue()
-    while task.wait(0.2) do
+    while task.wait(1) do
         if not _G.AutoHarvest3 then 
             return 
         end
@@ -810,7 +809,7 @@ end
 
 
 function AutoHarvestLemon()
-    while task.wait(0.2) do
+    while task.wait(1) do
         if not _G.AutoHarvest4 then 
             return 
         end
@@ -844,7 +843,7 @@ end
 
 
 function AutoHarvestJelly()
-    while task.wait(0.2) do
+    while task.wait(1) do
         if not _G.AutoHarvest5 then 
             return 
         end
@@ -878,7 +877,7 @@ end
 
 
 function AutoHarvestPumpkins()
-    while task.wait(0.2) do
+    while task.wait(1) do
         if not _G.AutoHarvest6 then 
             return 
         end
